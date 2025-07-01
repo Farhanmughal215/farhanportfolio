@@ -1,7 +1,9 @@
 import "./globals.css";
-import { Montserrat } from "next/font/google";
+import localFont from 'next/font/local'
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = localFont({
+  src: './fonts/Montserrat-Regular.woff2', // Put fonts in /public/fonts
+})
 
 export const metadata = {
   title: "Farhan Zafar | Web Developer & AI Specialist",
