@@ -1,11 +1,4 @@
 import "./globals.css";
-import localFont from 'next/font/local';
-
-const montserrat = localFont({
-  src: '/fonts/Montserrat-Regular.woff2', // ✅ Correct path (public/fonts)
-  weight: '400',
-  style: 'normal',
-});
 
 export const metadata = {
   title: "Farhan Zafar | Web Developer & AI Specialist",
@@ -19,7 +12,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
