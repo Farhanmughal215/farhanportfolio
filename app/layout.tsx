@@ -1,9 +1,11 @@
 import "./globals.css";
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
 
 const montserrat = localFont({
-  src: './fonts/Montserrat-Regular.woff2', // Put fonts in /public/fonts
-})
+  src: '/fonts/Montserrat-Regular.woff2', // ✅ Correct path (public/fonts)
+  weight: '400',
+  style: 'normal',
+});
 
 export const metadata = {
   title: "Farhan Zafar | Web Developer & AI Specialist",
